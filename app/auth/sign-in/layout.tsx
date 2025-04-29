@@ -11,6 +11,6 @@ interface Props {
 
 export default function layout({ children }: Props) {
     return (
-    <div>{children}</div>
+    <div className="w-full h-full p-5">{children}</div>
     )
 }
