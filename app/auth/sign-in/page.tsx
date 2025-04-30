@@ -1,5 +1,7 @@
 "use client";
 
+import { ToggleLanguage } from '@/components/toggle-language';
+import { ButtonTheme } from '@/components/toggle-theme';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -72,9 +74,9 @@ export default function SignInPage() {
 
   return (
     <div className='w-full h-full flex flex-col items-center justify-center '>
-      <div className='flex gap-2 text-sm'>
-        <h1 className='bg-red-500'>Toggle Theme</h1>
-        <h1 className='bg-red-500'>Toggle Language</h1>
+      <div className='flex gap-2 text-sm space-x-2'>
+        <ButtonTheme />
+        <ToggleLanguage />
       </div>
       <div className='w-full h-full mt-3'>
         <h1 className='text-lg text-center font-bold uppercase'>Crafted Space</h1>
