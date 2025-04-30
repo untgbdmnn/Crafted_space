@@ -10,7 +10,7 @@ export function ToggleLanguage() {
             <Tooltip>
                 <TooltipTrigger>
                     <div className='cursor-pointer'>
-                        <HiLanguage size={25} />
+                        <HiLanguage size={24} />
                     </div>
                 </TooltipTrigger>
                 <TooltipContent>

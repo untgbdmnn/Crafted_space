@@ -10,6 +10,7 @@ import requestData from '@/servers/request';
 import { redirect, useRouter } from 'next/navigation';
 import * as React from 'react'
 import { toast } from 'sonner';
+import Cookies from 'js-cookie';
 
 export default function SignInPage() {
   const { token, setAuth, clearAuth } = useAuthStore()
@@ -65,6 +66,7 @@ export default function SignInPage() {
           <Button className='cursor-pointer uppercase font-bold text-xs' onClick={() => router.push('/registered')}>Registered</Button>
           <Button className='cursor-pointer uppercase font-bold text-xs' onClick={() => {
             clearAuth()
+            Cookies.remove('auth');
             redirect('/')
           }}>Log out</Button>
         </div>

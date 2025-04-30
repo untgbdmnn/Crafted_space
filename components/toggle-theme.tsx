@@ -17,11 +17,11 @@ export function ButtonTheme() {
         <TooltipProvider>
             <Tooltip>
                 <TooltipTrigger>
-                    <button className="cursor-pointer w-fit" onClick={handleSwitch}>
+                    <button className="cursor-pointer w-fit flex items-center justify-center" onClick={handleSwitch}>
                         {theme == 'dark' ? (
-                            <RiMoonFoggyLine size={25} className="text-blue-600" />
+                            <RiMoonFoggyLine size={24} className="text-blue-600" />
                         ) : (
-                            <TbSunset2 size={25} className="text-yellow-600" />
+                            <TbSunset2 size={24} className="text-yellow-600" />
                         )}
                     </button>
                 </TooltipTrigger>

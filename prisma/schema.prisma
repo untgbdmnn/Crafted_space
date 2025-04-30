@@ -17,6 +17,8 @@ model User {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
   Social    Social[]
+  Hero      Hero[]
+  Title     Title[]
 
   @@map("_user")
 }
@@ -36,4 +38,30 @@ model Social {
   updatedAt DateTime @updatedAt
 
   @@map("_social")
+}
+
+model Hero {
+  hero_id       Int      @id @default(autoincrement())
+  user          User?    @relation(fields: [userUser_id], references: [user_id])
+  slogan_in     String?
+  slogan_en     String?
+  userUser_id   Int?
+  sub_slogan_id String?
+  sub_slogan_en String?
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  @@map("_hero")
+}
+
+model Title {
+  titleId     Int      @id @default(autoincrement())
+  title_id    String?
+  title_en    String?
+  user        User?    @relation(fields: [userUser_id], references: [user_id])
+  userUser_id Int?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@map("_title")
 }
